@@ -41,7 +41,7 @@ func (a *API) GetContentByID(id string, query ContentQuery) (*Content, error) {
 // GetContentForSpace queries content for the space
 func (a *API) GetContentForSpace(id string) (*Content, error) {
 	ep, err := a.getContentEndpoint(id)
-	if err !- nil {
+	if err != nil {
 		return nil, err
 	}
 	return a.SendContentRequest(ep, "GET", nil)
